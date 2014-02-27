@@ -51,9 +51,6 @@
             offset: {
                 top: function() {
                     return $(".header").height();
-                },
-                bottom: function() {
-                    return $("footer").outerHeight(true);
                 }
             }
         });
