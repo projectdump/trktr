@@ -143,6 +143,11 @@
             },
             10
             );
+            if(document.location['pathname'] != "/") {
+                document.body.scrollTop = $(".header").height();
+            }
+            else {
+            }
         }
             /*function() {
                 $(".under").each( function(x) {
