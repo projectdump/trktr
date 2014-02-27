@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-md-3">
+<h5>studio</h5>
+<p>Reichenberger Str. 155 <br /> D-10999 Berlin</p>
+&ndash;
+<p class="inactive">Facebook <br /> Twitter <br /> RSS-Feed</p>
+</div>
+<div class="col-md-3">
+<h5>contact</h5>
+<p>Max Mustermann <br /> Funktion</p>
+&ndash;
+<p>t. +49 30 28502883-0 f. +49 30 28502883-0 <a class="inactive" href="mailto:info@traktor.de">info@traktor.de</a></p>
+</div>
+<div class="col-md-3">&nbsp;</div>
+<div class="col-md-3">
+<h5>newsletter</h5>
+<input type="text" /> <input type="text" /> subscribe</div>
+</div>
