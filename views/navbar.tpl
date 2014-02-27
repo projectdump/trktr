@@ -1,0 +1,26 @@
+<div class = "navbar-padding">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">TRAKTOR</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                {{!helper.menu()}}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
