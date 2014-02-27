@@ -1,12 +1,16 @@
       <footer>
-        <div class="container">
-            <div class = "marketing grey">
-                {{!helper.footer()}}
+        <div class="footer-wrapper-white">
+            <div class="footer-wrapper">
+                <div class="container">
+                    <div class = "marketing grey">
+                        {{!helper.footer()}}
+                    </div>
+                </div>
             </div>
         </div>
       </footer>
-
-    </div><!-- /.container -->
+<!--
+    </div> /.container -->
 
 
     <!-- Bootstrap core JavaScript
