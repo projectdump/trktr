@@ -1,7 +1,7 @@
 #import MySQLdb
 #import MySQLdb.cursors
 import sqlite3
-from ..config import mysql, sqlitedb
+from ..config import sqlitedb
 
 def setup():
     #return MySQLdb.connect(host = mysql['host'],
