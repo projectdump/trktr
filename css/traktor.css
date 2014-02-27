@@ -48,10 +48,13 @@ h2 {
     position:fixed;
     width:100%;
     z-index:10000;
+    background-color:#ffff36;
 }
 .navbar-padding {
     position:relative;
     min-height:84px;
+    width:100%;
+    background-color:#ffff36;
 }
 .navbar {
     background-color:#ffff36;
@@ -342,10 +345,18 @@ footer {
     float:left;
     width:100%;
 }
-footer .container {
+.footer-wrapper-white {
     padding-top:100px;
+}
+.footer-wrapper {
+    background-color:#f5f4f3;
+}
+footer .container {
     background-color:white;
     min-height:200px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom:0px;
 }
 .boxcontent {
     position:absolute;
@@ -374,11 +385,6 @@ body > .container {
     right:0px;
     /*margin-right:-60px;*/
     z-index:1000;
-}
-footer .container {
-    padding-left:0px;
-    padding-right:0px;
-    padding-bottom:0px;
 }
 footer .grey {
     background-color:#f5f4f0;
