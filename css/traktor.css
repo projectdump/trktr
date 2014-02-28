@@ -41,7 +41,11 @@ h2 {
 
 .header img{
     width:100%;
-    }
+}
+.header {
+    max-height:500px;
+    overflow:hidden;
+}
 
 .navbar-wrapper.affix {
     top:0;
@@ -133,6 +137,9 @@ h2 {
 }
 .padding-right-0 {
     padding-right:0px!important;
+}
+.img-responsive {
+    width:100%;
 }
 
 .center {

@@ -1,3 +1,3 @@
-<div class = "container header">
+<div class = "header">
     {{!helper.header_image()}}
 </div>
