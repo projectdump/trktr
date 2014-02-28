@@ -56,25 +56,25 @@ h2 {
 }
 .navbar-padding {
     position:relative;
-    min-height:84px;
+    min-height:50px;
     width:100%;
     background-color:#ffff36;
 }
 .navbar {
     background-color:#ffff36;
     border-color:#ffff36;
-    height:84px;
+/*    height:84px; */
     margin-bottom:0px;
 }
 .navbar-header a, .navbar-header a:hover, .navbar-header a:focus {
     color:white;
     font-size:22px;
-    line-height:54px;
+/*    line-height:54px; */
 }
 .navbar-nav > li > a{
     color:#222222;
-    line-height:54px;
-    font-size:22px;
+    /*line-height:54px;
+    font-size:22px;*/
     padding-left:21px;
     padding-right:21px
 }
