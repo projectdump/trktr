@@ -40,9 +40,17 @@
     <script src="/js/holder.js"></script>
     <script>
         $(".entry").hover( function () {
-            $(this).css("z-index", "100");
+            if($(this).css("z-index") == 1000) {
+                return false;
+            } else {
+                $(this).css("z-index", "100");
+            }
         }, function () {
-            $(this).css("z-index", "0");
+            if($(this).css("z-index") == 1000) {
+                return false;
+            } else {
+                $(this).css("z-index", "0");
+            }
         });
         $(".up").click( function() {
             $("html, body").animate({scrollTop: $(".header").height()});
@@ -55,6 +63,7 @@
             }
         });
         $(".box").click( function (e) {
+            $(this).parent().css("z-index", "1000");
             $(this).parent().find(".cover").animate({
                 "opacity": 0}, 250, function(e) {
                     $(this).parent().find('.boxcontent').show();
@@ -84,6 +93,8 @@
             return false;
         });
         $(".x").click( function (e) {
+            var entry = $(this).parent().parent();
+            entry.css("z-index", "0");
             var blacklayer = $(this).parent().parent().find(".blacklayer")
             var margin = parseInt($(this).parent().parent().find(".boxcontent").css("padding-bottom"));
             //$(this).parent().parent().find(".boxcontent").css("padding-bottom"));
