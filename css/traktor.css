@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5 {
 .navbar {
     background-color:#ffff36;
     border-color:#ffff36;
-/*    height:84px; */
+    height:50px; 
     margin-bottom:0px;
 }
 .navbar-header a, .navbar-header a:hover, .navbar-header a:focus {
