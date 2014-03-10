@@ -18,6 +18,12 @@
                 {{!helper.menu()}}
               </ul>
             </div>
+            <div class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a href ="#">login</a></li>
+                    <li class = "lang-sel"><a href ="#">en</a>/<a href = "#">de</a></li>
+                </ul>
+            </div>
           </div>
         </div>
 

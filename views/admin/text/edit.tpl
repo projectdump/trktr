@@ -47,7 +47,7 @@
                 <option value = "{{text['overlap']}}">{{textinfo['overlapstring']}}</option>
                 <option value = "1">light</option>
                 <option value = "2">mid</option>
-                <option value = "3">strong</option>
+                <option value = "3">no overlap but positive margin</option>
             </select>
         </div>
         <div class = "form-group">

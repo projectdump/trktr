@@ -1,7 +1,7 @@
       <footer>
         <div class="footer-wrapper-white">
             <div class="footer-wrapper">
-                <div class="container">
+                <div class="container grey">
                     <div class = "marketing grey">
                         {{!helper.footer()}}
                     </div>

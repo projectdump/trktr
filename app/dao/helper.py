@@ -89,13 +89,13 @@ class Helper:
         html = "<div class = \""+cssclass+"\">\n"
         html += "   <div class = \""+cssclass+" under\"></div>\n"
         html += "   <img src = \""+text['coverpic']+"\" class = \"img-responsive cover\">\n"
-        html += "   <a class = \"box\">\n"
+        html += "   <a class = \"box\" id=\""+text['name']+"\">\n"
         html += "       <div class = \"blacklayer\">\n"
         html += text['abstract']
         html += "       </div>\n"
         html += "   </a>\n"
         html += "   <div class = \"boxcontent\">\n"
-        html += "       <div class = \"x\"></div>\n"
+        html += "       <div class = \"x\" id=\"close"+text['name']+"\"></div>\n"
         html += "       <div class = \"content\">\n"
         html += text['content']
         html += "       </div>\n"

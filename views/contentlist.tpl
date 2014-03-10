@@ -4,7 +4,7 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container">
+    <div class="fullwidth">
         
         <div class = "listcontent">
             {{!helper.list()}}

@@ -43,7 +43,7 @@
             <select class = "input-xlarge" name = "overlap">
                 <option value = "1">light</option>
                 <option value = "2">mid</option>
-                <option value = "3">strong</option>
+                <option value = "3">no overlap but positive margins</option>
             </select>
         </div>
         <div class = "form-group">
