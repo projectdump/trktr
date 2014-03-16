@@ -16,19 +16,18 @@ body {
 p {
     font-family:"Apercu Regular", Calibri, sans-serif;
     font-size:18px;
-    line-height:32px;
-}
-h1 {
-}
-h2 {
-    font-size:28px;
-    line-height:42px;
+    line-height:25px;
+    margin-top:3px;
 }
 h1, h2, h3, h4, h5 {
-    font-size:28px;
+    font-size:22px;
     font-family:"Apercu Regular", Calibri, sans-serif;
+    line-height:22px;
 }
 
+.fullwidth {
+    width:100%;
+}
 .bg1 {
     background-color:#ffffff;
     width:100%;
@@ -46,7 +45,7 @@ h1, h2, h3, h4, h5 {
     width:100%;
 }
 .header {
-    max-height:500px;
+/*    max-height:500px;*/
     overflow:hidden;
 }
 
@@ -58,8 +57,9 @@ h1, h2, h3, h4, h5 {
     background-color:#ffff36;
 }
 .navbar-padding {
+    font-size:18px;
     position:relative;
-    min-height:60px;
+    min-height:59px;
     width:100%;
     background-color:#ffff36;
 }
@@ -107,8 +107,17 @@ h1, h2, h3, h4, h5 {
     padding-right:0px;
     margin-right:74px;
 }
+.lang-sel a {
+    display:inline!important;
+}
+.lang-sel {
+    margin-top:15px;
+}
 .row {
     margin-top:20px;
+}
+.navbar-collapse:before, .navbar-collapse:after {
+    display: inline;
 }
 
 
@@ -134,6 +143,10 @@ h1, h2, h3, h4, h5 {
     padding-right:20px;
     margin-bottom:20px;
 }
+.col-sm-3 {
+    padding-left:10px;
+    padding-right:10px;
+}
 
 .padding-left-0 {
     padding-left:0px!important;
@@ -151,7 +164,7 @@ h1, h2, h3, h4, h5 {
     margin-left:auto;
     margin-right:auto;
 }
-
+/*
 .fourtwofive-l {
     max-width: 425px;
     max-height: 283px;
@@ -186,6 +199,39 @@ h1, h2, h3, h4, h5 {
     max-width: 520px;
     position:relative;
 }
+*/
+.fourtwofive-l {
+    max-width: 350px;
+    max-height: 233px;
+    position:relative;
+}
+
+.sixfourtwo-l {
+    max-width: 500px;
+    max-height: 333px;
+    position:relative;
+}
+.seveneightone-l {
+    max-width: 566px;
+    max-height: 425px;
+    position:relative;
+}
+.fourtwofive-p {
+    max-height: 233px;
+    max-width: 350px;
+    position:relative;
+}
+.sixfourtwo-p {
+    max-height: 333px;
+    max-width: 500px;
+    position:relative;
+}
+.seveneightone-p {
+    max-height: 425px;
+    max-width: 566px;
+    position:relative;
+}
+
 .blacklayer {
     width:100%;
     height:100%;
@@ -211,10 +257,9 @@ h1, h2, h3, h4, h5 {
     margin-bottom:-40px;
 }
 .overlap3r {
-    margin-left:-60px;
-    margin-bottom:-60px;
+    margin-left:20px;
+    margin-bottom:20px;
 }
-
 .overlap1l {
     margin-right:-20px;
     margin-bottom:-20px;
@@ -224,8 +269,8 @@ h1, h2, h3, h4, h5 {
     margin-bottom:-40px;
 }
 .overlap3l {
-    margin-right:-60px;
-    margin-bottom:-60px;
+    margin-right:20px;
+    margin-bottom:20px;
 }
 
 .overlap1c {
@@ -239,16 +284,20 @@ h1, h2, h3, h4, h5 {
     right:20%;
 }
 .overlap3c {
-    margin-top:-60px;
-    margin-bottom:-60px;
+    margin-top:20px;
+    margin-bottom:20px;
     left:25%;
 }
 .modal-dialog {
     width: 100%
 }
 .marketing {
-    padding-left:115px;
+/*    padding-left:115px;
     padding-right:115px;
+    */
+    max-width:1050px;
+    margin-left:auto;
+    margin-right:auto;
     background-color:transparent;
     padding-top:44px;
     padding-bottom:125px;
@@ -269,8 +318,11 @@ h1, h2, h3, h4, h5 {
     background-image:url('/img/uphover.gif');
 }
 .container {
+    /*
     padding-left:55px;
     padding-right:55px;
+    */
+    width:1185px;
     font-family:"Apercu Regular", Calibri, sans-serif;
 }
 
@@ -388,6 +440,7 @@ body > .container {
     background-color:white;
 }
 .x {
+    margin-top:20px;
     width:21px;
     height:21px;
     background-image:url(/img/close.gif);
@@ -401,4 +454,27 @@ footer .grey {
     bottom:0px;
     min-height:300px;
     margin-bottom:-20px;
+}
+footer input[type=text] {
+    width:100%;
+    background-color:transparent;
+    border-left-width:0px;
+    border-right-width:0px;
+    border:1px 1px;
+    border-color:#222222;
+    color:#888888;
+}
+footer input[type=submit] {
+    margin-top:5px;
+    margin-left:0px;
+    padding-left:0px;
+    background-color:transparent;
+    border:0px;
+}
+.email {
+    margin-top:-2px;
+}
+/* shadowbox custom css */
+#sb-container {
+    z-index:10000;
 }
