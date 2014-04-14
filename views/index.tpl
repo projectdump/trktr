@@ -31,8 +31,12 @@
         })();
     </script>
     <link href="/css/traktor.css" rel="stylesheet">
+    <link href="/css/responsive_traktor.css" rel="stylesheet">
   </head>
   <body>
+  <div id = "loading">
+    <img id = "loading-image" src = "img/loading.gif">
+  </div>
 
   %include
 
@@ -71,7 +75,7 @@ function navigate(current, target) {
     simulate(document.getElementById(closeId), 'click');
     setTimeout(function() {
         simulate(document.getElementById(targetId.replace('#', "")), 'click')
-    }, 1000);
+    }, 10);
     return false;
 }
 

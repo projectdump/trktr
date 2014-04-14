@@ -60,9 +60,16 @@ var defaultOptions = {
 }
 
 $(".entry").hover( function () {
-    $(this).css("z-index", "100");
+    if(!$(this).hasClass("active")) {
+        $(this).css("z-index", "100");
+    }
 }, function () {
-    $(this).css("z-index", "0");
+    if(!$(this).hasClass("active")) {
+        $(this).css("z-index", "0");
+    }
+});
+$(".blacklayer").hover( function () {
+}, function () {
 });
 
 $(".up").click( function() {
@@ -78,83 +85,91 @@ $(".navbar-wrapper").affix({
 });
 
 $(".box").click( function (e) {
-    $(this).parent().find(".cover").animate({
-        "opacity": 0}, 250, function(e) {
-            $(this).parent().find('.boxcontent').show();
-            $(this).parent().find('.cover').hide();
-            return false;
-        });
-    var margin = parseInt($(this).parent().css('margin-bottom'))*-1
-    $(this).parent().find('.boxcontent').css('padding-bottom', margin);
-    $(this).parent().css('margin-bottom', "100px");
-    //$(this).find(".blacklayer").css("background-color", "white");
-    //$(this).find(".blacklayer").css("opacity", "1");
-    if($(this).parent().hasClass("center")) {
-        $(this).parent().css("right", "auto");                
-        $(this).parent().css("float", "left");                
-        $(this).parent().animate({
-            "left": "0px",
-            "margin-left": "0px" 
-        });
+    $(".active .x").click();
+    var padding = $(this).parent().find(".boxcontent").css(".margin-bottom");
+    var x = $(this).parent().find(".x");
+    var entry = $(this).parent();
+    var cover = $(this).parent().find('.cover');
+    var boxcontent = $(this).parent().find('.boxcontent');
+    var margin = parseInt(entry.css('margin-bottom'))*-1;
+    var blacklayer = $(this).find(".blacklayer");
+    entry.addClass("active");
+    entry.css("overflow","visible");
+    x.css("display","block");
+    x.css("opacity","1");
+    cover.hide();
+    boxcontent.show();
+    boxcontent.css("opacity", 1);
+    boxcontent.css('padding-bottom', margin);
+    if(entry.hasClass("center")) {
+        entry.css("float", "left");                
+        entry.css("left", "0");                
+        entry.css("margin-left", "0px");                
+        entry.css("margin-right", "0px");
     }
-    $(this).find(".blacklayer").hide();
-    $(this).parent().css("max-width", "100%");
-    $(this).parent().css("max-height", $(this).parent().find(".boxcontent").height());
-    $(this).parent().animate({
-        "width": "100%",
-        "height": $(this).parent().find(".boxcontent").height()
-        });
+
+    blacklayer.hide();
+    entry.css("max-width", "100%");
+    entry.css("width", "100%");
     $('body').animate({
-        scrollTop: $(this).parent().offset().top - 40
-    })
-    //alert($(this).parent().attr('class'));
+        scrollTop: entry[0].offsetTop - 50
+    }, 500, function(e) {
+        entry.css("max-height", entry.find(".boxcontent").innerHeight());
+        entry.css("height", entry.find(".boxcontent").innerHeight());
+        return false;
+    });
     return false;
 });
 
 $(".x").click( function (e) {
-    var blacklayer = $(this).parent().parent().find(".blacklayer")
+    var blacklayer = $(this).parent().parent().find(".blacklayer");
+    var under = $(this).parent().parent().find(".under"); 
+    var entry = $(this).parent().parent();
+    entry.css('overflow', "hidden");
+    var cover= $(this).parent().parent().find("cover");
     var margin = parseInt($(this).parent().parent().find(".boxcontent").css("padding-bottom"));
-    //$(this).parent().parent().find(".boxcontent").css("padding-bottom"));
-    $(this).parent().parent().css('margin-bottom', margin*-1);
-    $(this).parent().animate({
-        "opacity": 0
-    }, 250, function(e) {
-        $(this).hide();
-        $(this).css("opacity", "1");
-    });
-    //alert($(this).parent().parent().attr("class"));
-    $(this).parent().parent().css("max-width", "auto");
-    $(this).parent().parent().css("max-height", "auto");
-    //alert($(this).parent().parent().find(".under").width());
-    $(this).parent().parent().animate({
-        "width" : $(this).parent().parent().find(".under").width(),
-        "height": $(this).parent().parent().find(".under").height()
-    }, 500, function() {
-        blacklayer.show();
-    });
-    $(this).parent().parent().find(".cover").show();
-    //$(this).parent().parent().find(".blacklayer").show();
-    $(this).parent().parent().find(".cover").animate({
-        "opacity": "1"
-    },250);
-    if($(this).parent().parent().hasClass("center")) {
-        $(this).parent().parent().css("right", "50%");                
-        $(this).parent().parent().css("float", "none");                
-        $(this).parent().parent().animate({
-            "left": "50%",
-            "margin-left": "-300px" 
-        });
+    entry.css('margin-bottom', entry.find("under").css("margin-bottom"));
+    
+    $(this).parent().css("opacity", "0");
+    $(this).hide();
+    $(this).css("opacity", "0");
+
+    if(under.css("margin-bottom") > 0 ) {
+        margin = -under.css("margin-bottom");
+    } else {
+        margin=0;
     }
 
-    //alert($(this).parent().parent().css("display"));
+    blacklayer.css("width", under.width());
+    blacklayer.css("height", under.height());
+
+    $(this).parent().parent().css("max-width", under.width());
+    $(this).parent().parent().css("max-height", under.height());
+
+    entry.css("width", under.width()+margin);
+    entry.css("height", under.height()+margin);
+    cover.show()
+    $(this).parent().parent().find(".cover").show();
+    cover.css('height', under.height())+margin;
+    cover.css('width', under.width())+margin;
+    cover.css("opacity", 1);
+    if($(this).parent().parent().hasClass("center")) {
+        entry.css("float", "");
+        entry.css("left", "");
+        entry.css("margin-left", "auto");
+        entry.css("margin-right", "auto");
+        
+    }
+    blacklayer.show();
+    entry.removeClass("active");
+    entry.css("overflow", "hidden");
+
     return false;
 });
 
 function updateUnderDivs() {
         $(".under").each( function(x) {
-            //alert($(this).parent().find(".cover").css("height"));
             var blacklayer = $(this).parent().find(".blacklayer");
-            //alert(blacklayer.css("height"));
             blacklayer.css("height", $(this).parent().find(".cover").css("height"));
             $(this).css("width", $(this).parent().css("max-width"));
             $(this).css("height", $(this).parent().find(".cover").css("height"));
@@ -172,34 +187,23 @@ $(document).ready(function () {
     10
     );
     $('.header').css('height', $(window).height() - $('.nav').height());
-}
-    /*function() {
-        $(".under").each( function(x) {
-            alert($(this).parent().find(".cover").css("height"));
-            $(this).css("width", $(this).parent().css("max-width"));
-            $(this).css("height", $(this).parent().find(".cover").css("height"));
-            $(this).css("display", "none");
-        });
-    }*/
-
-);
+});
 $(window).load(function() {
-    /*
     if(document.location['pathname'] != "/") {
         document.body.scrollTop = $(".header").height();
     }
     else {
     }
-    */
-    if(document.location['pathname'] != "/") {
-        $('body').animate( {
-            scrollTop: $(".header").height()
-        });
-    }
-    else {
-    }
+    $("#loading").hide();
+    $("html, body").css({
+        "overflow-y": "visible",
+        "height": "auto"
+    });
+});
+
+$(window).resize( function() {
+    updateUnderDivs();
+    return false;
 });
 
 Shadowbox.init();
-                
-
